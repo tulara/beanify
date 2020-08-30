@@ -1,6 +1,6 @@
 import styles from "../styles/ColorSelector.module.css"
 
-const ColorSelector = (props) => {
+const ColorSelector = ({ label, onSelect }) => {
   const colors = [
     {
       name: "rust",
@@ -21,14 +21,16 @@ const ColorSelector = (props) => {
   ]
 
   return (
-    <section className={styles.colorselector}>
+    <div className={styles.colorselector}>
+      <h4 className={styles.label}>{label}</h4>
       {colors.map((color) => (
         <span
-          onClick={() => props.onSelect(color.hex)}
+          key={color.name}
+          onClick={() => onSelect(color.hex)}
           className={`${styles.dot} ${styles[color.name]}`}
         ></span>
       ))}
-    </section>
+    </div>
   )
 }
 

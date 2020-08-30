@@ -1,12 +1,17 @@
 .colorselector {
   display: flex;
   flex-direction: row;
-  padding: 2rem;
+  justify-content: space-evenly;
+}
+
+.label {
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .dot {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   display: inline-block;
   margin: 0.5rem;
