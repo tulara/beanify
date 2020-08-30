@@ -1,7 +1,13 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 
+import Beanie from "../components/BeanieSVG"
+import ColorSelector from "../components/ColorSelector"
+import { useState } from "react"
+
 export default function Home() {
+  const [selectedColor, setSelectedColor] = useState("black")
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,13 +16,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img src="/beanie-2.svg" alt="pom pom" className={styles.beanie} />
-        <section className={styles.colorselector}>
-          <span className={`${styles.dot} ${styles.rust}`}></span>
-          <span className={`${styles.dot} ${styles.mustard}`}></span>
-          <span className={`${styles.dot} ${styles.navy}`}></span>
-          <span className={`${styles.dot} ${styles.teal}`}></span>
-        </section>
+        <Beanie stroke={selectedColor} fill="white" class={styles.beanie} />
+        <ColorSelector onSelect={setSelectedColor} />
       </main>
     </div>
   )
