@@ -1,15 +1,15 @@
 import Head from "next/head"
-import styles from "../styles/Home.module.css"
+import styles from "../styles/Home.module.scss"
 
 import Beanie from "../components/BeanieSVG"
 import BeanieCustomiser from "../components/BeanieCustomiser"
-import ColorSelector from "../components/ColorSelector"
 import { useState } from "react"
 
 export default function Home() {
-  const [bodyColor, setbodyColor] = useState("black")
-  const [brimColor, setbrimColor] = useState("black")
-  const [pomColor, setPomColor] = useState("black")
+  const defaultColor = "#e1ad01"
+  const [bodyColor, setbodyColor] = useState(defaultColor)
+  const [brimColor, setbrimColor] = useState(defaultColor)
+  const [pomColor, setPomColor] = useState(defaultColor)
   const [hasPompom, setHasPomPom] = useState(true)
 
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           strokeBrim={brimColor}
           strokePompom={pomColor}
           pompom={hasPompom}
-          class={styles.beanie}
+          className={styles.beanie}
         />
         <BeanieCustomiser
           setbodyColor={setbodyColor}

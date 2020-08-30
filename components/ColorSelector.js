@@ -1,4 +1,4 @@
-import styles from "../styles/ColorSelector.module.css"
+import styles from "../styles/ColorSelector.module.scss"
 
 const ColorSelector = ({ label, onSelect }) => {
   const colors = [

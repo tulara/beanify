@@ -1,4 +1,4 @@
-import styles from "../styles/BeanieCustomiser.module.css"
+import styles from "../styles/BeanieCustomiser.module.scss"
 
 import ColorSelector from "./ColorSelector"
 
