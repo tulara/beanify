@@ -1,3 +1,0 @@
-The start of my beanie empire...
-
-To run: `yarn dev`
