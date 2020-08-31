@@ -1,5 +1,7 @@
 import styles from "../styles/ColorSelector.module.scss"
 
+import Square from "./Square"
+
 const ColorSelector = ({ label, onSelect }) => {
   const colors = [
     {
@@ -24,11 +26,11 @@ const ColorSelector = ({ label, onSelect }) => {
     <div className={styles.colorselector}>
       <h4 className={styles.label}>{label}</h4>
       {colors.map((color) => (
-        <span
+        <Square
           key={color.name}
           onClick={() => onSelect(color.hex)}
-          className={`${styles.dot} ${styles[color.name]}`}
-        ></span>
+          color={color.hex}
+        />
       ))}
     </div>
   )
